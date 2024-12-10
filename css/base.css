@@ -272,6 +272,8 @@ footer#footer-container ul li{
 
 #footer-logo {
     margin-left: 0;
+    width: 100%;
+    object-fit: contain;
 }
 
 footer#footer-container section.copyright {
