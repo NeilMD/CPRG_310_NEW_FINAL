@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video/Drone</title>
+    <meta name="description" content="Professional photography services, including event, portrait, real estate, and corporate photography. Capturing memories with quality imagery.">
     <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/module.css">
     <link rel="stylesheet" href="./css/state.css">
     <link rel="stylesheet" href="./css/photography.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.svg">
     <script src="./script/initialize.js" defer></script>
     <script src="./script/photography.js" defer></script>
@@ -28,7 +29,7 @@
                     Whether it’s a wedding, a corporate event, or professional headshots, our photography services are designed to meet your needs. 
                 </span>
             </header>
-            <main class="d-flex">
+            <div class="d-flex">
                 <article class="camera-card">
                     <figure>
                         <img src="./assets/pages/photography/event.jpg" alt="Two people sharing a moment at a WINS Women's Day event" height="500" width="400">
@@ -64,31 +65,31 @@
                         Showcase your business or property with professional images that elevate your brand and attract clients.
                     </span>
                 </article>
-            </main>
+            </div>
         </section>
 
         <section id="gallery-wrapper">
             <h2>Photo Gallery</h2>
             <span id="gallery-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse exercitationem dicta omnis maxime aspernatur fugit iste sequi possimus architecto, magni provident? Quos debitis eum ducimus recusandae quis quisquam cumque placeat.</span>
-            <main id="gallery-section">
-
-            </main>
+            <div id="gallery-section">
+                <!-- Gallery content will go here -->
+            </div>
         </section>
+
         <!-- The Modal -->
         <section id="myModal" class="modal">
             <header>
                 <span class="close"><i class="fa-solid fa-xmark"></i></span>
             </header>
             <!-- Modal content -->
-            <main class="modal-content">
+            <div class="modal-content">
                 <div>
-                    <h3></h3>
-                    <h4></h4>
-                    <span></span>
+                    <h3 id="modalTitle"></h3>
+                    <h4 id="modalSubtitle"></h4>
+                    <span id="modalDescription"></span>
                 </div>
-                <img>
-            </main>
-
+                <img id="modalImage" src="" alt="Modal Image">
+            </div>
         </section>
     </main>
     <footer id="footer-container"></footer>

@@ -5,16 +5,17 @@
     justify-content: center;
     color: white;
     font-size: 5rem;
+    position: relative;
 }
 
-.audio-bg::after {
+.parallax:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     border: none;
     background:transparent; /* Semi-transparent overlay */
-    /* backdrop-filter: blur(3px);  */
+    backdrop-filter: brightness(0.5);
     height: 100%;
     width: 100%;
 }

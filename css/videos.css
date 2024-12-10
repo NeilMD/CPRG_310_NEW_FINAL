@@ -52,7 +52,12 @@ button:hover {
     opacity: 100%;
 }
 
+.video {
+    display: flex;
+    gap: 4rem;
+    flex: 1;
 
+}
 .video-information {
     color: var(--light-color);
     z-index: 2;
@@ -107,13 +112,8 @@ h4 {
     gap: 2rem;
 }
  
-.video-item.reverse {
+.reverse {
     flex-direction: row-reverse;
-}
- 
-.video {
-    flex: 1;
-    max-width: 50%;
 }
  
 .video iframe {
@@ -121,6 +121,7 @@ h4 {
     height: 315px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 0 50%;
 }
  
 .video-text {

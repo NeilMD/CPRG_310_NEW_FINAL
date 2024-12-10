@@ -143,6 +143,7 @@ document.getElementById('calendar-submit').addEventListener('click', () => {
     if (!validateForm()) {
         return; // Exit the function if validation fails
     }
+    content.innerText = 'Waiting for user login';
     loadGoogleScripts();
 })
 
@@ -197,7 +198,7 @@ async function addEventGoogle(data) {
             document.getElementById("email").value = '';
             document.getElementById("date").value = '';
             document.getElementById("time").value = '';
-            document.getElementById("services").value = '#';
+            document.getElementById("services").value = '';
 
           });
 
