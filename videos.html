@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video/Drone</title>
+    <link rel="stylesheet" href="https://use.typekit.net/let1pqf.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/module.css">
+    <link rel="stylesheet" href="./css/state.css">
+    <link rel="stylesheet" href="./css/videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <script src="./script/initialize.js" defer></script>
+    <script src="./script/videos.js" defer></script>
+</head>
+<body>
+    <header id="header-container"></header>
+    <main>
+        <section class="slideshow-container">
+            <video id="slideshow-video" width="800" height="400" autoplay >
+                <source id="video-source" src="./assets/video-playlist/drone.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <footer id="slideshow-footer" class="d-flex">
+                <main class="video-information d-flex flex-column fb-50 ">
+                    <h3 id="video-title">Drone/Video</h3>
+                    <h4 id="video-client">Fotage from Calgary</h4>
+                   <span id="video-details">
+                    At Night Sparrow Productions, we specialize in creating videos that inspire, inform, and connect. From nonprofit campaigns to real estate listings and creative commercials, our video and drone services deliver stunning visuals that elevate your brand and tell your story.
+                   </span>
+                </main>
+                <div class="video-actions d-flex fb-50 fj-end flex-end">
+                  <button id="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
+                  <button id="next-btn"><i class="fa-solid fa-angle-right"></i></button>  
+                </div>
+            </footer>
+        </section>
+    </main>
+    <footer id="footer-container"></footer>
+</body>
+</html>

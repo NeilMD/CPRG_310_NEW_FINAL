@@ -1,0 +1,125 @@
+.slideshow-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow-video {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#slideshow-footer {
+   width: 100%;
+   height: 30vh;
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   background: linear-gradient(to top, #000000d4, transparent);
+   padding: 3rem 4rem;
+}
+
+#slideshow-footer::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to top, #000000cc, transparent);
+    transform: translateY(100%);
+    padding: 3rem 4rem;
+    transition: transform 1s ease-in-out;
+ }
+
+#slideshow-footer:hover::after{ 
+    transform: translateY(0);
+}
+
+
+button {
+    background-color: unset;
+    border: none;
+    color: var(--light-color);
+    font-size: 5rem;
+    opacity: 70%;
+    z-index: 2;
+    transition-property: opacity;
+}
+
+button:hover {
+    opacity: 100%;
+}
+
+
+.video-information {
+    color: var(--light-color);
+    z-index: 2;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+
+h3 {
+    margin: unset;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0.8rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#video-title {
+    font-weight: 700;
+    opacity: 0; 
+    animation: slideUp 1s  ease-out forwards .5s;
+}
+
+#video-client {
+    font-weight: 600;
+    opacity: 0; 
+    animation: slideUp 1s  ease-out forwards 1s;
+}
+
+#video-details {
+    opacity: 0; 
+    font-weight: 500;
+    animation: slideUp 1s  ease-out forwards 1.5s;
+}
+
+.fb-40 {
+    flex-basis: 40%;
+}
+
+.hidden {
+    opacity: 0;
+    animation: none;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1034px) {  
+    footer#slideshow-footer {
+        height: fit-content;
+        height: 30vh;
+    }
+}
+
+/* RESPONSIVE FOR PHONE */
+@media screen and (max-width: 480px) {
+    footer#slideshow-footer {
+       flex-direction: column;
+       flex-wrap: wrap;
+       height: fit-content;
+       background: linear-gradient(to top, #000000f5, #00000005);
+    }
+    .video-actions {
+        height: fit-content;
+        justify-content: space-between;
+        font-size: 4rem;
+    }
+}
+
