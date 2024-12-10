@@ -136,6 +136,7 @@ function addRealTimeValidation() {
         }
     });
 }
+
 addRealTimeValidation();
 
 document.getElementById('calendar-submit').addEventListener('click', () => {

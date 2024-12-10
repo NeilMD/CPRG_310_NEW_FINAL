@@ -8,10 +8,24 @@
     align-content: center;
 }
 
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    background:transparent; /* Semi-transparent overlay */
+    backdrop-filter: blur(3px); 
+    height: 100%;
+    width: 100%;
+  }
+
 .hero-banner h1 {
     font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    z-index: 3;
+    position: relative;
     color: var(--light-color);
 }
 
