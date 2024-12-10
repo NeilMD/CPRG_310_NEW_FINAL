@@ -138,13 +138,17 @@ function addRealTimeValidation() {
 }
 addRealTimeValidation();
 
-
-
-// Set Event in Google
-async function addEventGoogle(data) {
+document.getElementById('calendar-submit').addEventListener('click', () => {
     if (!validateForm()) {
         return; // Exit the function if validation fails
     }
+    loadGoogleScripts();
+})
+
+// Set Event in Google
+async function addEventGoogle(data) {
+    
+    document.getElementById("calendar-submit").setAttribute('disabled','');
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const date = document.getElementById("date").value;
@@ -153,7 +157,7 @@ async function addEventGoogle(data) {
 
     const event = {
         'summary': `${name} Appointment`,
-        'location': 'Southern Alberta Institute of Technology',
+        'location': 'Evergreen Southwest, Calgary Alberta, Canada',
         'description': `Appointment set by ${name}, wanted to know more about ${services}`,
         'start': {
           'dateTime': `${date}T${time}:00-07:00`,
@@ -164,11 +168,11 @@ async function addEventGoogle(data) {
           'timeZone': 'America/Los_Angeles'
         },
         'recurrence': [
-          'RRULE:FREQ=DAILY;COUNT=2'
+          'RRULE:FREQ=DAILY;COUNT=1'
         ],
         'attendees': [
           {'email': `${email}`},
-          {'email': 'neilcydric.capistrano@edu.sait.ca'}
+          {'email': 'matt@nightsparrowsproduction.com'}
         ],
         'reminders': {
           'useDefault': false,
@@ -185,7 +189,7 @@ async function addEventGoogle(data) {
       });
 
       try {
-        request.execute(function(event) {
+        await request.execute(function(event) {
             calendar.refetchEvents();
             content.innerText = 'You have successfully set an appointment!';
             document.getElementById("name").value = '';
@@ -194,7 +198,9 @@ async function addEventGoogle(data) {
             document.getElementById("time").value = '';
             document.getElementById("services").value = '#';
 
-          })
+          });
+
+          document.getElementById("calendar-submit").removeAttribute('disabled');
       }catch(err){
         console.log('schedule')
       }

@@ -78,7 +78,7 @@ function signin() {
             elContent.style.color = 'indianred'
         }
         elContent.innerText = '';
-        // await listUpcomingEvents();
+        addEventGoogle();
     };
     try {
         if (gapi.client.getToken() === null) {
@@ -110,36 +110,19 @@ function handleSignoutClick() {
     }
 }
 
-/**
- * Print the summary and start datetime/date of the next ten events in
- * the authorized user's calendar. If no events are found an
- * appropriate message is printed.
- */
-async function listUpcomingEvents() {
-    let response;
-    try {
-        const request = {
-        'calendarId': 'primary',
-        'timeMin': (new Date()).toISOString(),
-        'showDeleted': false,
-        'singleEvents': true,
-        'maxResults': 10,
-        'orderBy': 'startTime',
-        };
-        response = await gapi.client.calendar.events.list(request);
-    } catch (err) {
-        document.getElementById('content').innerText = err.message;
-        return;
-    }
+function loadGoogleScripts() {
+    // Dynamically create and add the first script
+    const gapiScript = document.createElement('script');
+    gapiScript.src = "https://apis.google.com/js/api.js";
+    gapiScript.async = true;
+    gapiScript.defer = true;
+    gapiScript.onload = gapiLoaded; // Callback when loaded
+    document.head.appendChild(gapiScript);
 
-    const events = response.result.items;
-    if (!events || events.length == 0) {
-        document.getElementById('content').innerText = 'No events found.';
-        return;
-    }
-    // Flatten to string to display
-    const output = events.reduce(
-        (str, event) => `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,
-        'Events:\n');
-    document.getElementById('content').innerText = output;
+    // Dynamically create and add the second script
+    const gisScript = document.createElement('script');
+    gisScript.src = "https://accounts.google.com/gsi/client";
+    gisScript.defer = true;
+    gisScript.onload = gisLoaded; // Callback when loaded
+    document.head.appendChild(gisScript);
 }
