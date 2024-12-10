@@ -7,6 +7,22 @@
     font-size: 5rem;
 }
 
+.audio-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    background:transparent; /* Semi-transparent overlay */
+    backdrop-filter: blur(3px); 
+    height: 100%;
+    width: 100%;
+}
+
+.audio-bg h2 {
+    z-index: 3;
+}
+
 main {
     section:not(:nth-of-type(1)) {
         margin : 4rem 6rem;

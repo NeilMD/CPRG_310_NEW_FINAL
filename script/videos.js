@@ -8,16 +8,16 @@ const videos = [
     },
     {
       src: './assets/video-playlist/hope1440.webm',
-      title: 'Product Launch',
-      client: 'Tech Co.',
-      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.',
+      title: 'Hope for the Holidays Campaign',
+      client: 'WINS',
+      details: 'This touching video for WINS highlights their Gift Rooms, bringing the joy of giving and hope to families during the holiday season.',
       link: 'https://www.youtube.com/embed/n-brrvfNZkA'
     },
     {
       src: './assets/video-playlist/poverty1440.webm',
-      title: 'Product Launch',
-      client: 'Tech Co.',
-      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.',
+      title: 'New Face of Poverty Campaign',
+      client: 'WINS',
+      details: 'Through heartfelt storytelling, this video sheds light on Calgary’s poverty challenges and the resilience of its community members.',
       link: 'https://youtube.com/watch?v=eE76cIdE3As'
     },
     

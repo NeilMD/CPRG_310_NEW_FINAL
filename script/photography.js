@@ -119,6 +119,7 @@ let load = function (template) {
 
         //Set Picture info
         img.src = pic.src; 
+        img.alt =pic.details;
         hoverText.textContent = pic.title; 
         
         //Add click event 
