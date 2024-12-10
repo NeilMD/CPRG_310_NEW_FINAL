@@ -32,8 +32,8 @@ if (focus.length) {
         entry.target.classList.toggle("right-animate", entry.isIntersecting);
       }
 
-      // Stop observing once animation is triggered
-      if (entry.isIntersecting) observer.unobserve(entry.target);
+      // // Stop observing once animation is triggered
+      // if (entry.isIntersecting) observer.unobserve(entry.target);
     });
   }, {
     threshold: 0.2

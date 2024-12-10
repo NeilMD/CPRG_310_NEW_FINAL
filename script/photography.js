@@ -187,9 +187,11 @@ const addBehavior = ()=> {
 
         entries.forEach(entry => {
             if (entry.target.classList.contains('camera-card')) {
-            entry.target.classList.toggle("card-img-animation", entry.isIntersecting);
+                entry.target.classList.toggle("card-img-animation", entry.isIntersecting);
             } else {
+                console.log('asd')
                 document.body.classList.toggle("dark-mode", entry.isIntersecting);
+                entry.target.classList.toggle("card-img-animation", false);
             }
     
         
@@ -209,12 +211,12 @@ const addBehavior = ()=> {
     const observerGc = new IntersectionObserver((entries, observerGc) => {
 
         entries.forEach(entry => {
-            console.log('entry')
+           
             entry.target.classList.toggle("gallery-card-animation", entry.isIntersecting);
         });
 
     }, {
-        threshold: 0.1
+        threshold: 0.4
     });
 
     galleryCard.forEach(im => observerGc.observe(im));

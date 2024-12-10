@@ -1,21 +1,24 @@
 const videos = [
     {
-      src: './assets/video-playlist/drone.mp4',
+      src: './assets/video-playlist/drone1440.webm',
       title: 'Drone/Video',
       client: 'Fotage from Calgary',
-      details: 'At Night Sparrow Productions, we specialize in creating videos that inspire, inform, and connect. From nonprofit campaigns to real estate listings and creative commercials, our video and drone services deliver stunning visuals that elevate your brand and tell your story.'
+      details: 'At Night Sparrow Productions, we specialize in creating videos that inspire, inform, and connect. From nonprofit campaigns to real estate listings and creative commercials, our video and drone services deliver stunning visuals that elevate your brand and tell your story.',
+      link: 'https://youtube.com/watch?v=RTljpInTZsc'
     },
     {
-      src: './assets/video-playlist/hopefortheholidays.mp4',
+      src: './assets/video-playlist/hope1440.webm',
       title: 'Product Launch',
       client: 'Tech Co.',
-      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.',
+      link: 'https://www.youtube.com/embed/n-brrvfNZkA'
     },
     {
-      src: './assets/video-playlist/povertyroundtable.mp4',
+      src: './assets/video-playlist/poverty1440.webm',
       title: 'Product Launch',
       client: 'Tech Co.',
-      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.'
+      details: 'An exciting new product that revolutionizes the tech industry with cutting-edge features.',
+      link: 'https://youtube.com/watch?v=eE76cIdE3As'
     },
     
   ];
@@ -76,3 +79,6 @@ const videos = [
     currentIndex = (currentIndex - 1 + videos.length) % videos.length;  // Move to the previous video
     updateVideo(currentIndex);
   });
+
+
+  

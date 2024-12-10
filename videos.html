@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/state.css">
     <link rel="stylesheet" href="./css/videos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+
     <script src="./script/initialize.js" defer></script>
     <script src="./script/videos.js" defer></script>
 </head>
@@ -18,10 +19,11 @@
     <header id="header-container"></header>
     <main>
         <section class="slideshow-container">
-            <video id="slideshow-video" width="800" height="400" autoplay >
-                <source id="video-source" src="./assets/video-playlist/drone.mp4" type="video/mp4">
+            <video id="slideshow-video" width="800" height="400" autoplay loop>
+                <source id="video-source" src="./assets/video-playlist/drone1440.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
+            <div id="ytplayer"></div>
             <footer id="slideshow-footer" class="d-flex">
                 <main class="video-information d-flex flex-column fb-50 ">
                     <h3 id="video-title">Drone/Video</h3>

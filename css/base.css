@@ -154,6 +154,7 @@ section article:nth-of-type(2) {
 span {
     /* font-family: 'adobe-hebrew', sans-serif; */
     font-size: 1.7rem;
+    text-align: justify;
 }
 
 figure {
