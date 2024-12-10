@@ -1,5 +1,5 @@
 .camera-bg {
-    background-image: url('../assets/pages/photography/aboutheader.jpg');
+    background-image: url('../assets/pages/photography/photographyheader.jpg');
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
   left: 0;
   border: none;
   background:transparent; /* Semi-transparent overlay */
-  backdrop-filter: blur(3px); 
+  /* backdrop-filter: blur(3px);  */
   height: 100%;
   width: 100%;
 }
