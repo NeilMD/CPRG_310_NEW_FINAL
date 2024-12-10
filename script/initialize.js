@@ -1,3 +1,5 @@
+let FF_FOUC_FIX;
+
 // Function to load a template and inject it into a specific container
 function loadTemplate(templatePath, containerId) {
     fetch(templatePath)

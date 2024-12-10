@@ -34,3 +34,34 @@ section.modal header span {
     text-decoration: none;
     cursor: pointer;
 }
+
+.focus-wrapper {
+    align-items: center;
+    margin:15rem 0;
+ }
+ 
+ .focus-header:has(img) {
+     text-align: center;
+ }
+ 
+ .focus-header {
+     width: 100%;
+ }
+ 
+ .focus-header img {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+ 
+ 
+ .focus-number {
+     font-size: 5rem;
+     font-weight: 600;
+ }
+ 
+ .focus-content header h3,
+ .focus-header h3 {
+     font-size: 4rem;
+     line-height: 1;
+ }
