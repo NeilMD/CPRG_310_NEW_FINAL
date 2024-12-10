@@ -14,7 +14,7 @@ if (pastImg.length) {
       if (entry.isIntersecting) observer.unobserve(entry.target);
     });
   }, {
-    threshold: 0.5
+    threshold: 0.3
   });
 
   pastImg.forEach(im => observer.observe(im));

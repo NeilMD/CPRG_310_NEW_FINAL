@@ -136,6 +136,7 @@ img:not(nav a img, #footer-logo){
 
 .past-img img {
     object-fit: contain;
+    height: 100%;
 }
 
 .past-img span {

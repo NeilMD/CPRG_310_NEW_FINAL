@@ -58,20 +58,12 @@ button:hover {
     z-index: 2;
 }
 
-h2 {
-    font-size: xx-large;
-}
-
-
 h3 {
-    margin: unset;
-    font-weight: 500;
+    margin: unset;   
 }
 
 h4 {
     margin: 0.8rem 0;
-    font-size: 2rem;
-    font-weight: 300;
 }
 
 #video-title {
@@ -99,6 +91,53 @@ h4 {
 .hidden {
     opacity: 0;
     animation: none;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem 2rem;
+}
+ 
+.video-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+ 
+.video-item.reverse {
+    flex-direction: row-reverse;
+}
+ 
+.video {
+    flex: 1;
+    max-width: 50%;
+}
+ 
+.video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+.video-text {
+    flex: 1;
+    max-width: 50%;
+}
+ 
+.video-text h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+ 
+.video-text p {
+    font-size: 1.6rem;
+    color: var(--dark-color);
+    line-height: 1.8;
 }
 
 @media screen and (min-width: 480px) and (max-width: 1034px) {  
