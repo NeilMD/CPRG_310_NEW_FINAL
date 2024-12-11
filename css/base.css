@@ -127,7 +127,7 @@ nav ul a {
     font-weight: 600;
 }
 
-nav ul li a:not(.button-light)::after {
+nav ul li a:not(.button-light, i.fa-solid.fa-bars)::after {
     content: '';
     position: absolute;
     left: 0;
@@ -140,6 +140,14 @@ nav ul li a:not(.button-light)::after {
 
 nav ul li a:not(.button-light):hover::after {
     width: 100%; /* Full underline when hovered */
+}
+
+#burger-nav {
+    display: none;
+}
+
+#burger-nav  a.button-light {
+    border-radius: 5px;
 }
 
 section:not(:first-child) {
@@ -283,6 +291,33 @@ footer#footer-container section.copyright {
 }
 
 
+#menuModal {
+    background-color: white;
+}
+
+#menuModal header span i,
+#menuModal div.modal-content ul li a {
+    text-decoration: none;
+    font-size: 5vw;
+    color: var(--secondary-color);
+    list-style: none;
+    transition: color 0.4s ease-in-out;
+}
+
+#menuModal header span i:hover,
+#menuModal div.modal-content ul li a:hover {
+    color: var(--dark-color);
+}
+
+#menuModal div.modal-content ul li {
+   
+    color: var(--dark-color);
+}
+
+#menuModal div.modal-content ul {
+    list-style: none;
+}
+ 
 @media screen and (min-width: 480px) and (max-width: 1034px) {
     main {
         section:not(:nth-of-type(1)) {

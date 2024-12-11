@@ -99,6 +99,7 @@ section #call-to-action {
 
 #studio-message {
     width: 40%;
+    flex: 1 0 30%;
 }
 
 img:not(nav a img, #footer-logo){

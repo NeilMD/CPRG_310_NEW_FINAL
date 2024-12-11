@@ -36,6 +36,18 @@
 
     .plr-6 {
         padding: 1rem;
+    }   
+
+    header#header-container nav ul li.full-nav {
+        display: none;
+    }
+
+    li.full-nav:after:hover {
+        content: '';
+    }
+
+    li#burger-nav {
+        display: block;
     }
 
     footer#footer-container img {
@@ -47,15 +59,15 @@
 
     span.section-title {
         padding: 2rem 0;
+        transform: rotate(0);
+        display: block;
+        position: static;
     }
     /* AUDIO */
     .focus-wrapper {
         flex-direction: column;
         margin: 0;
     }
-
-
-
    
 }
 

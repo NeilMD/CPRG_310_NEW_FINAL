@@ -6,6 +6,7 @@ function loadTemplate(templatePath, containerId) {
         .then(response => response.text())
         .then(data => {
             document.getElementById(containerId).innerHTML = data;
+            addMenuModal();
         })
         .catch(error => console.error('Error fetching template:', error));
 }
@@ -31,3 +32,26 @@ window.onscroll = function() {
 
   lastScrollTop = currentScroll;
 };
+
+
+const addMenuModal =()=>{
+  //Modal section
+  let modal = document.getElementById("menuModal");
+  let span = document.getElementsByClassName("close")[0];
+  let openModal = function () {
+      modal.style.display = "flex";
+  }
+  // Close MOdal
+  let closeModal = function () {
+      modal.style.display = "none";
+  }
+
+  document.getElementById('burger-nav').addEventListener('click',()=>{openModal()});
+  span.addEventListener('click', ()=>{closeModal()});
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
